@@ -1,0 +1,42 @@
+{
+  "formatVersion": 1,
+  "id": "${mod_id}",
+  "version": "${mod_version}",
+  "name": "${mod_name}",
+  "description": "${mod_desc}",
+  "authors": [
+    "nab138"
+  ],
+  "meta": {
+    "icon": "ecliptic:icons/icon.png"
+  },
+  "entrypoints": {
+    "postInit": [
+      "me.nabdev.ecliptic.core.EclipticCorePostinit"
+    ],
+    "client_init": [
+      "me.nabdev.ecliptic.core.ClientInitializer"
+    ],
+    "init": [
+      "me.nabdev.ecliptic.core.EclipticCore"
+    ],
+    "preInit": [
+      "me.nabdev.ecliptic.core.EclipticCorePreinit"
+    ]
+  },
+  "mixins": [
+    "eclipticcore.mixins.json",
+    {
+      "config": "eclipticcore.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "cosmic-reach": ">=0.4.8",
+    "puzzle-loader": ">=3.0.4",
+    "cosmic-api": ">=1.2.7"
+  },
+  "accessTransformers": [
+    "ecliptic_core.manipulator"
+  ]
+}
