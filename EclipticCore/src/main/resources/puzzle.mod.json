@@ -11,17 +11,11 @@
     "icon": "ecliptic:icons/icon.png"
   },
   "entrypoints": {
-    "postInit": [
-      "me.nabdev.ecliptic.core.EclipticCorePostinit"
-    ],
     "client_init": [
       "me.nabdev.ecliptic.core.ClientInitializer"
     ],
     "init": [
       "me.nabdev.ecliptic.core.EclipticCore"
-    ],
-    "preInit": [
-      "me.nabdev.ecliptic.core.EclipticCorePreinit"
     ]
   },
   "mixins": [
