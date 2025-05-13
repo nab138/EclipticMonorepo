@@ -8,14 +8,14 @@
     "nab138"
   ],
   "meta": {
-    "icon": "ecliptic:icons/icon.png"
+    "icon": "ecliptic-core:icons/icon.png"
   },
   "entrypoints": {
     "client_init": [
-      "me.nabdev.ecliptic.core.ClientInitializer"
-    ],
-    "init": [
       "me.nabdev.ecliptic.core.EclipticCore"
+    ],
+    "client_postInit": [
+        "me.nabdev.ecliptic.core.EclipticCorePostinit"
     ]
   },
   "mixins": [
